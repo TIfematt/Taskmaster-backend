@@ -1,0 +1,40 @@
+{
+  "name": "taskmaster",
+  "version": "1.0.0",
+  "description": "Simple task manager",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && nodemon dist/index.js",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "dev": "nodemon App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TIfematt/Taskmaster-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TIfematt/Taskmaster-backend/issues"
+  },
+  "homepage": "https://github.com/TIfematt/Taskmaster-backend#readme",
+  "dependencies": {
+    "@babel/plugin-transform-async-to-generator": "^7.25.9",
+    "@babel/plugin-transform-object-rest-spread": "^7.25.9",
+    "@babel/plugin-transform-runtime": "^7.25.9",
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.2",
+    "nodemon": "^3.1.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.9",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0"
+  }
+}
