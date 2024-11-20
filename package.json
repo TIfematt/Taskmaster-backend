@@ -5,8 +5,8 @@
   "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && nodemon dist/index.js",
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "build": "babel index.js -d dist",
+    "start": "npm run build && nodemon dist/index.js",  
     "dev": "nodemon App.js --exec babel-node"
   },
   "repository": {
